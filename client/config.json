@@ -1,0 +1,26 @@
+{
+  "id": "5f7a9753ad7bb65d614b71e0",
+  "name": "mongodb-atlas",
+  "type": "mongodb-atlas",
+  "config": {
+      "clusterName": "Clusterkjy",
+      "readPreference": "primary",
+      "sync": {
+          "state": "enabled",
+          "partition": {
+              "key": "author",
+              "type": "string",
+              "permissions": {
+                  "read": {
+                      "%%partition": "%%user.id"
+                  },
+                  "write": {
+                      "%%partition": "%%user.id"
+                  }
+              }
+          }
+      },
+      "wireProtocolEnabled": false
+  },
+  "version": 1
+}
